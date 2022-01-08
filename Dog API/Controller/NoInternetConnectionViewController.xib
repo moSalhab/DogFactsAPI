@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoInternetConnectionViewController" customModule="Dog_API" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="S7A-EC-WjH" id="hdy-Ea-ABj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjD-na-bav">
+                    <rect key="frame" x="10" y="194" width="394" height="508"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternet" translatesAutoresizingMaskIntoConstraints="NO" id="S7A-EC-WjH">
+                            <rect key="frame" x="107" y="20" width="180" height="180"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-Jd-G49">
+                            <rect key="frame" x="10" y="210" width="374" height="112.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-SY-jao">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure wifi or cellular data is turned on and then try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-uZ-IbA">
+                                    <rect key="frame" x="0.0" y="34" width="374" height="38.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNY-2z-SOU">
+                                    <rect key="frame" x="0.0" y="82.5" width="374" height="30"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Try Again"/>
+                                    <connections>
+                                        <action selector="tryAgainBtnTapped:" destination="-1" eventType="touchUpInside" id="P7p-lC-eQT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="S7A-EC-WjH" firstAttribute="centerX" secondItem="EjD-na-bav" secondAttribute="centerX" id="D4C-in-gJp"/>
+                        <constraint firstItem="S7A-EC-WjH" firstAttribute="top" secondItem="EjD-na-bav" secondAttribute="top" constant="20" id="Kv3-LE-vwP"/>
+                        <constraint firstItem="aFB-Jd-G49" firstAttribute="leading" secondItem="EjD-na-bav" secondAttribute="leading" constant="10" id="rwY-ZR-svh"/>
+                        <constraint firstAttribute="trailing" secondItem="aFB-Jd-G49" secondAttribute="trailing" constant="10" id="t3c-8d-f1L"/>
+                        <constraint firstItem="aFB-Jd-G49" firstAttribute="top" secondItem="S7A-EC-WjH" secondAttribute="bottom" constant="10" id="xmS-LN-QJM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EjD-na-bav" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="GLE-AH-vzI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EjD-na-bav" secondAttribute="trailing" constant="10" id="LCt-XY-lkf"/>
+                <constraint firstItem="EjD-na-bav" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Lah-5N-ICr"/>
+                <constraint firstItem="EjD-na-bav" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mtd-9H-IjZ"/>
+                <constraint firstItem="EjD-na-bav" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.566964" id="g1V-Kf-kFe"/>
+                <constraint firstItem="S7A-EC-WjH" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.200893" id="kXe-RL-kx8"/>
+                <constraint firstItem="S7A-EC-WjH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.434783" id="pnw-kH-nsy"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="59.598214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noInternet" width="216" height="216"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
